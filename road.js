@@ -51,7 +51,6 @@ class road
     {
       //Number of stripes is the length of the road divided by the stripe length divided by 2 since there is blank space between each stripe
       var numStripes = Math.floor( ( this.h / stripeLen ) / 2 )
-      console.log(numStripes)
       //draw outer lines
       rect( this.x, this.y, stripeW, this.h )
       rect( this.x + this.w - stripeW, this.y, stripeW, this.h )
@@ -67,7 +66,6 @@ class road
 
         for( var j = 0; j < numStripes; j++ )
         {
-          console.log(currX, currY, stripeW, stripeLen );
           rect( currX, currY, stripeW, stripeLen );
           currY += 2 * stripeLen
         }
