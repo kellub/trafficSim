@@ -9,6 +9,8 @@ const EW = 1;
 
 class road
 {
+  //x and y for NS roads is the bottom left.
+  //x and y for EW roads is the top left.
   constructor(x, y, numLanes, len, dir)
   {
     //Road width is: Number of lanes times width of lane + width the outside road stripes + the width of the stripes between the lanes
