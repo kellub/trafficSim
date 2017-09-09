@@ -3,8 +3,10 @@ var canv;
 
 function setup() {
   canv = createCanvas(window.innerWidth, window.innerHeight);
+  car = new automobile(10,10,30,50,3,S);
   car = new automobile(71,10,30,50,3,S);
   road1 = new road( 65, 0, 3, window.innerHeight, NS );
+  road2 = new road( 0, 65, 3, window.innerWidth, EW );
 }
 
 function draw() {
@@ -21,6 +23,7 @@ function draw() {
       console.log("car deleted");
     }
   }
+  road2.draw();
 }
 
 function assert( condition, message )
