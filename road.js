@@ -4,14 +4,23 @@ const laneW = 10;
 const stripeW = 1;
 const stripeH = 4;
 
+const LEFT = 0;
+const RIGHT = 1;
+
 class road
     {
-    constructor(x, y, numLanes, h)
+    constructor(x, y, numLanes, len, dir)
         {
+            //Road width is: Number of lanes times width of lane + width the outside road stripes + the width of the stripes between the lanes
+            roadW = numLanes * laneW + 2 * stripeW + ( numLanes - 1 ) * stripeW;
+
             this.x = x;
             this.y = y;
-            //Lane width is: Number of lanes times width of lane + width the outside road stripes + the width of the stripes between the lanes
-            this.w = numLanes * laneW + 2 * stripeW + ( numLanes - 1 ) * stripeW;
+
+            if( dir == roadDir.LEFT )
+            {
+
+            }
             this.h = h;
         }
         
@@ -24,7 +33,8 @@ class road
     drawStripes()
         {
             //Draw outside stripes
-            
+            fill(244, 235, 66)
+            rect(this.x, this.y, )
         }
     }
 
