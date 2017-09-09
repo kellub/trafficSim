@@ -37,5 +37,3 @@ class road
             rect(this.x, this.y, )
         }
     }
-
-    test
